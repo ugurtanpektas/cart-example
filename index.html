@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Sepet</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script type="text/javascript" src="Modules/DataReader/DataReader.js"></script>
+    <script type="text/javascript" src="Modules/Cart/Cart.js"></script>
+    <script type="text/javascript" src="Modules/Main/Main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="box cart-container mobile-hidden" id="cart">
+			<h2>SEPETİM</h2>
+			<div class="cart-product-container" id="cartContainer">
+				<div class="empty-cart">
+					<img src="assets/img/cart.png" width="64" height="64"/>
+					Sepetiniz henüz boş
+				</div>
+			</div>
+		</div>
+		<div class="box menu-container">
+			<div class="search-container">
+				<input type="text" placeholder="Ürün ara..." id="searchText" onkeyup="search()" onchange="search()" onfocus="search()">
+			</div>
+			<ul id="productList">
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="open-mobile-cart">
+		<a href="#" onclick="toggleMobileCart();">
+			<img src="assets/img/mobile-cart.png" width="22"> SEPETİM <span id="mobileCartCount">(0)</span>
+		</a>
+	</div>
+	<div class="go-top" id="goTop">
+		<a href="#" onclick="window.scrollTo(0, 0);">
+			<img src="assets/img/up-arrow.png" width="22"> Yukarı git
+		</a>
+	</div>
+	<div class="mobile-cart-overlay mobile-hidden" id="overlay"></div>
+</body>
+</html>
